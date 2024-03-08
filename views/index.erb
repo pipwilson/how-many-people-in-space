@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>How many people are in space right now?</title>
+  <style type="text/css" media="screen">
+    body {
+      margin:0px;
+      font-family:courier;
+      font-size:20px;
+    }
+    
+    #main {
+      background-image: url(/images/background.png);
+      width:384px;
+      height:266px;
+      margin-top:10px;
+    }
+
+    #count {
+      width:142px;
+      height:98px;
+      position:relative;
+      top:105px;
+      left:20px;
+      font-family:'Courier';
+      font-size:78px;
+      color:white;
+      text-align:center;
+      padding-top:12px;
+      font-weight:bold;
+    }
+    
+    img {
+      display:block;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <div id="main">
+		  <div id='count'><%= @count %></div>
+    </div>
+    <img src='/images/border-bottom.png'>
+  </div>
+</body>
+</html>
