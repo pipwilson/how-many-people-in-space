@@ -19,8 +19,8 @@ get '/sample' do
 end
 
 def fetch_count
-  regex = Regexp.new(/THERE ARE (.*) HUMANS IN SPACE/)
-  url = 'https://whoisinspace.com/'
+  regex = Regexp.new(/There are currently (.*) people in space/)
+  url = 'https://www.worldspaceflight.com/bios/currentlyinspace.php'
   html = RestClient.get(url).body.gsub!("\n", "")
   begin
     @count = html.match(regex)[1]
