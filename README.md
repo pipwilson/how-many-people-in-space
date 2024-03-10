@@ -13,4 +13,4 @@ The rest of the code in this repo is subject to the terms in the LICENSE file.
 
 Terms of both licenses must be met for redistribution or modification.
 
-This little application is entirely dependent on the information provided by https://whoisinspace.com/ - many thanks to them!
+This little application is entirely dependent on the information provided by https://www.worldspaceflight.com/bios/currentlyinspace.php (previously https://whoisinspace.com/) - many thanks to them!
