@@ -1,5 +1,6 @@
 require 'sinatra'
 require 'rest-client'
+require 'puppeteer-ruby'
 
 set :bind, '0.0.0.0'
 
@@ -18,6 +19,13 @@ get '/sample' do
   erb :index
 end
 
+get '/image' do
+  Puppeteer.launch(headless: true) do |browser|  page = browser.new_page
+    page.goto("https://how-many-people-in-space.onrender.com/")
+    page.screenshot(path: "spaaaaace.png")
+  end
+end
+
 def fetch_count
   regex = Regexp.new(/There are currently (.*) people in space/)
   url = 'https://www.worldspaceflight.com/bios/currentlyinspace.php'
@@ -27,7 +35,7 @@ def fetch_count
     File.write("count", @count)
   rescue NoMethodError
     @count = -1
-  end   
+  end
 end
 
 def count_is_old
