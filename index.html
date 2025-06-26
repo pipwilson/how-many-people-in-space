@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="UTF-8">
   <title>How many people are in space right now?</title>
   <style type="text/css" media="screen">
     body {
@@ -8,9 +9,9 @@
       font-family:courier;
       font-size:20px;
     }
-    
+
     #main {
-      background-image: url(/images/background.png);
+      background-image: url(public/images/background.png);
       width:384px;
       height:266px;
       margin-top:10px;
@@ -29,7 +30,7 @@
       padding-top:12px;
       font-weight:bold;
     }
-    
+
     img {
       display:block;
     }
@@ -38,9 +39,10 @@
 <body>
   <div id="container">
     <div id="main">
-		  <div id='count'><%= @count %></div>
+      <div id="count">0</div>
     </div>
-    <img src='/images/border-bottom.png'>
+    <img src="public/images/border-bottom.png">
   </div>
+  <script src="app.js"></script>
 </body>
 </html>
